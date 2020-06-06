@@ -254,9 +254,9 @@
 <!--                <p>The normal run is consists of three parts:</p>-->
                 <ol>
                     <li class="mt-3">The UAV following the reference path with camera orientation down to the ground.</li>
-                    <li class="mt-3">The flight mission is expected to be completed with the target time at 24 time step and time budget at 48 time step without any privacy risk.</li>
+                    <li class="mt-3">The flight mission is expected to be completed with the target time ($\Delta_t$) at 24 time step and time budget ($\Delta$) at 48 time step without any privacy risk.</li>
                     <li class="mt-3">Both of the environment and UAV motions are discrete ($20\times20\times10m$), and the UAV moves at the speed of $0.5m/s$, time instant $\tau=2s$, $D_c=4.5m$, $N=2$, $\omega \in [33.3\%, 100\%]$ ,
-                        where orientation angles $-90^\circ$ is represented with $\omega = 100\%$ and $30^\circ$ is $\omega = 33.3\%$.</li>
+                        where orientation angles $-90^\circ$ (direct to ground) is represented with $\omega = 100\%$ and $30^\circ$ is $\omega = 33.3\%$.</li>
                 </ol>
                 <p>Note that, as the UAV is controlled by a customized Android application deployed on a remote controller, communication delay is taken into consideration such that the UAV will wait for the next command.
                     In the future work, we plan to exploit the onboard SDK to save the communication time. </p>
@@ -273,7 +273,7 @@
                 <p>At $k=14$ s, the UAV detected and located the private house, and our approach $Captain$ is launched to analyze whether the timeliness and privacy requirement can be satisfied.</p>
                 <p>After goal violation analysis, the UAV found that those two goals cannot be satisfied simultaneously and figured out an compromised resolution to go up, turning the orientation angle
                     and resolution of the camera without exposing the private house.</p>
-                <p>Finally, the UAV reached the destination cost 26 time step at the timeliness satisfaction of $DS^1(\mathcal{X}_\xi)=91.7\%$ and privacy preserving satisfaction of $DS^2(\mathcal{X}_{P})=96.6\%$.</p>
+                <p>Finally, the UAV reached the destination cost 26 time steps at the timeliness satisfaction of $DS^1(\mathcal{X}_\xi)=91.7\%$ and privacy preserving satisfaction of $DS^2(\mathcal{X}_{P})=96.6\%$.</p>
             </div>
         </div>
     </section>
